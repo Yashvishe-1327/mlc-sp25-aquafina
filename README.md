@@ -10,7 +10,7 @@ due Wednesday, April 9th, at 11:59PM.
 
 This is the base repository to build upon.
 
-1. Fork this repository
+1. Fork this repository, once per group
 2. Ensure your repository is set to private
 3. Add @ryanhammonds and @ustunb to the repository
 4. Add all team members to the respository
