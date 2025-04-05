@@ -89,7 +89,7 @@ class ScorableModel(ScorableModelTemplate):
         raise NotImplementedError()
 
 # Intialize, runs: __check_rep__ to validate class
-model = ScorableModel() # error will be raised if the above is not implmented correctly
+model = ScorableModel() # error will be raised if the above is not implemented correctly
 ```
 
 ## DSMLP
