@@ -45,7 +45,7 @@ The `.predict` method should:
 
 Each competition has a specific `compute_score` function. Check it to ensure what is
 returned from `.predict` is compatiable. Each `ScorableModelTemplate` class has
-a `__check_rep__` method that tests if your predictions can be scores. See the
+a `__check_rep__` method that tests if your predictions can be scored. See the
 `__check_rep__` method for an example of how to pass the output from `.predict` to `compute_score`.
 
 Complete the following and commit it to a submission.py or submission.ipynb file:
