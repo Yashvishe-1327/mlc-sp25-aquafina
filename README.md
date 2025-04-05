@@ -90,3 +90,12 @@ class ScorableModel(ScorableModelTemplate):
 # Intialize, runs: __check_rep__ to validate class
 model = ScorableModel() # error will be raised if the above is not implmented correctly
 ```
+
+## DSMLP
+
+[Slides](https://docs.google.com/presentation/d/1NAEO91toHvFN9y_7jojfs3pxln0MkH4YhGTNdSVj6xU/edit?usp=sharing)
+on DSMLP.
+
+- How to access datasets on DSMLP
+- How to clone you forked version of this repository to DSMLP
+- How to start notebooks with and without GPU
