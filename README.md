@@ -26,8 +26,8 @@ for each comptition, accessible from:
 - `mlc/cashflow.py`
 
 Extend the `ScorableModelTemplate` and include your work. The `.process_inputs` and `.predict`
-methods need to be implemented, and have specific required inputs. These inputs are documented
-in `ScorableModelTemplate.predict` and `ScorableModelTemplate.process_inputs` for each competition.
+methods need to be implemented, and have specific required inputs. See the docstring of
+these methods, specific to your compeititon, to ensure correct inputs are passed.
 In BugNIST and BirdCLEF, these functions require a list of file paths to each tif or ogg file.
 Cashflow reqiures two inputs, string paths to consumer_data.parquet and transactions.parquet.
 
@@ -44,8 +44,8 @@ The `.predict` method should:
 3) Return predictions that are compatible with you competitions `compute_score` function.
 
 Each competition has a specific `compute_score` function. Check it to ensure what is
-returned from `.predict` is compatiable. The each `ScorableModelTemplate` class has
-a `__check_rep__` method that tests you predictions with the scoring function. See the
+returned from `.predict` is compatiable. Each `ScorableModelTemplate` class has
+a `__check_rep__` method that tests if your predictions can be scores. See the
 `__check_rep__` method for an example of how to pass the output from `.predict` to `compute_score`.
 
 Complete the following and commit it to a submission.py or submission.ipynb file:
