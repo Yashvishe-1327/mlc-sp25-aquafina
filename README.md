@@ -1,5 +1,11 @@
 # ML Competitions: Models & Scoring
 
+## Competition Submission Form
+
+Once everything below is completed, *every* team member should submit the
+[Competition Submission Form](https://forms.gle/giucmSFyYQiBjL1S6). It is
+due Wednesday, April 16th, at 11:59PM.
+
 ## Repository Instructions
 
 This is the base repository to build upon.
@@ -35,7 +41,6 @@ The `.process_inputs` method should:
 
 1) Read in raw data
 2) Compute features (optional for the first assignment)
-3) Be called from `.predict`
 
 The `.predict` method should:
 
@@ -44,9 +49,18 @@ The `.predict` method should:
 3) Return predictions that are compatible with you competitions `compute_score` function.
 
 Each competition has a specific `compute_score` function. Check it to ensure what is
-returned from `.predict` is compatiable. Each `ScorableModelTemplate` class has
-a `__check_rep__` method that tests if your predictions can be scored. See the
-`__check_rep__` method for an example of how to pass the output from `.predict` to `compute_score`.
+returned from `.predict` is compatible.
+
+### __check_rep__
+
+Each `ScorableModelTemplate` class has a `__check_rep__` method that tests if your predictions
+can be scored. This method runs tests when your template sub-class is initialized.
+See the `__check_rep__` method for:
+
+- an example of how to pass the output from `.predict` to `compute_score`, specific to each competition
+- the tests that are required to pass
+
+### Submission
 
 Complete the following and commit it to a submission.py or submission.ipynb file:
 
@@ -73,10 +87,6 @@ class ScorableModel(ScorableModelTemplate):
         # Implement this: only need to read in files for first assignment
         raise NotImplementedError()
 
+# Intialize, runs: __check_rep__ to validate class
 model = ScorableModel() # error will be raised if the above is not implmented correctly
 ```
-
-## Competition Submission Form
-
-Once the above is completed, *every* team member should submit the
-[Competition Submission Form](https://forms.gle/giucmSFyYQiBjL1S6).
