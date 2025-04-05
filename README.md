@@ -62,7 +62,8 @@ See the `__check_rep__` method for:
 
 ### Submission
 
-Complete the following and commit it to a submission.py or submission.ipynb file:
+Complete the following in either a submission.py or submission.ipynb. Commit this file and push it to
+your github fork. It is what will be used for grading.
 
 ```python
 from mlc.[your competition] import ScorableModelTemplate
@@ -96,6 +97,7 @@ model = ScorableModel() # error will be raised if the above is not implmented co
 [Slides](https://docs.google.com/presentation/d/1NAEO91toHvFN9y_7jojfs3pxln0MkH4YhGTNdSVj6xU/edit?usp=sharing)
 on DSMLP.
 
+- How to login
 - How to access datasets on DSMLP
 - How to clone you forked version of this repository to DSMLP
 - How to start notebooks with and without GPU
