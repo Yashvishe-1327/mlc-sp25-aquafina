@@ -81,6 +81,9 @@ def compute_score(df_consumer: pd.DataFrame, y_pred: np.ndarray):
     :param y_pred: prediction for each row in df_consumer
     :return score: min auc across consumer groups
     """
+    assert isinstance(df_consumer, pd.DataFrame)
+    assert isinstance(y_pred, (np.ndarray, list, tuple, pd.Series))
+
     df_consumer['group_id'] = df_consumer['masked_consumer_id'].str[:3]
     df_consumer['y_pred'] = y_pred
     return min([roc_auc_score(df["FPF_TARGET"], df["y_pred"]) for _, df in df_consumer.groupby('group_id')])

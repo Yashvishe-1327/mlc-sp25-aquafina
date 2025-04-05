@@ -92,6 +92,9 @@ def compute_score(solution: pd.DataFrame, submission: pd.DataFrame) -> float:
     Returns:
         float: Score for the submission.
     """
+    assert isinstance(solution, pd.DataFrame)
+    assert isinstance(submission, pd.DataFrame)
+
     f1_scores = []
     for i in range(len(submission)):
         if pd.isna(submission.iloc[i, 1]):

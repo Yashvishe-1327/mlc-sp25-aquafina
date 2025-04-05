@@ -89,6 +89,9 @@ def compute_score(solution: pd.DataFrame, submission: pd.DataFrame, row_id_colum
     :param row_id_column_name: name of column, should be "row_id", to drop when scoring
     :return score: auc score
     """
+    assert isinstance(solution, pd.DataFrame)
+    assert isinstance(submission, pd.DataFrame)
+
     del solution[row_id_column_name]
     del submission[row_id_column_name]
 
