@@ -4,7 +4,7 @@
 
 Once everything below is completed, *every* team member should submit the
 [Competition Submission Form](https://forms.gle/giucmSFyYQiBjL1S6). It is
-due Wednesday, April 16th, at 11:59PM.
+due Wednesday, April 9th, at 11:59PM.
 
 ## Repository Instructions
 
