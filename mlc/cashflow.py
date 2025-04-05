@@ -3,7 +3,9 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import roc_auc_score
 from abc import ABC, abstractmethod
+from pathlib import Path
 
+DATA = Path(__file__).resolve().parent / "test_data"
 class ScorableModelTemplate(ABC):
     """Abstract class for scorable models.
 
@@ -28,8 +30,8 @@ class ScorableModelTemplate(ABC):
         :return raw_input: dataframe of transactions for one person
         :return true_output: pd.DataFrame of true target prediction
         """
-        raw_input = pd.read_parquet("mlc/test_data/transactions.parquet")
-        true_output = pd.read_parquet("mlc/test_data/consumer_data.parquet")
+        raw_input = pd.read_parquet(str(DATA / "transactions.parquet"))
+        true_output = pd.read_parquet(str(DATA / "consumer_data.parquet"))
         return raw_input, true_output
 
     def __check_rep__(self):
@@ -40,7 +42,7 @@ class ScorableModelTemplate(ABC):
 
         # Predict
         try:
-            predicted_output = self.predict("mlc/test_data/consumer_data.parquet", "mlc/test_data/transactions.parquet")
+            predicted_output = self.predict(str(DATA / "consumer_data.parquet"), str(DATA / "transactions.parquet"))
         except Exception as e:
             raise ValueError(f"predict function does not work: {e}")
 

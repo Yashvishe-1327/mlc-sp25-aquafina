@@ -1,11 +1,14 @@
 """BirdCLEF model and scoring template."""
+from pathlib import Path
 import numpy as np
 import pandas as pd
 import pandas.api.types
 import sklearn.metrics
 import soundfile as sf
 from abc import ABC, abstractmethod
+from pathlib import Path
 
+DATA = Path(__file__).resolve().parent / "test_data"
 class ScorableModelTemplate(ABC):
     """Abstract class for scorable models.
 
@@ -30,8 +33,8 @@ class ScorableModelTemplate(ABC):
         :return raw_input: np.array audio signal
         :return true_output: pd.DataFrame of true target prediction
         """
-        raw_input, _ = sf.read("mlc/test_data/H02_20230420_074000.ogg")
-        true_output = pd.read_csv("mlc/test_data/H02_20230420_074000.csv")
+        raw_input, _ = sf.read(str(DATA / "H02_20230420_074000.ogg"))
+        true_output = pd.read_csv(str(DATA / "H02_20230420_074000.csv"))
         return raw_input, true_output
 
     def __check_rep__(self):
@@ -42,7 +45,7 @@ class ScorableModelTemplate(ABC):
 
         # Predict
         try:
-            predicted_output = self.predict(["mlc/test_data/H02_20230420_074000.ogg"])
+            predicted_output = self.predict([str(DATA / "H02_20230420_074000.ogg")])
         except Exception as e:
             raise ValueError(f"predict function does not work: {e}")
 

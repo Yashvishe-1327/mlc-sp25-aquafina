@@ -7,7 +7,8 @@ import scipy
 from scipy.spatial.distance import cdist
 from abc import ABC, abstractmethod
 from skimage.io import imread
-
+from pathlib import Path
+DATA = Path(__file__).resolve().parent / "test_data"
 class ScorableModelTemplate(ABC):
     """Abstract class for scorable models.
 
@@ -32,8 +33,8 @@ class ScorableModelTemplate(ABC):
         :return raw_input: 3d np array of volume
         :return true_output: pd.DataFrame of true target prediction
         """
-        raw_input = imread("./mlc/test_data/mix_02_006.tif")
-        true_output = pd.read_csv("./mlc/test_data/mix_02_006.csv")
+        raw_input = imread(str(DATA / "mix_02_006.tif"))
+        true_output = pd.read_csv(str(DATA / "mix_02_006.csv"))
         return raw_input, true_output
 
     def __check_rep__(self):
@@ -44,7 +45,7 @@ class ScorableModelTemplate(ABC):
 
         # Predict
         try:
-            predicted_output = self.predict(["mlc/test_data/mix_02_006.tif"])
+            predicted_output = self.predict([str(DATA / "mix_02_006.tif")])
         except Exception as e:
             raise ValueError(f"predict function does not work: {e}")
 
