@@ -68,6 +68,7 @@ class ScorableModel(ScorableModelTemplate):
         """Input argument will vary. See you competition's template.
 
         :param raw_files: list of file path strings
+        :return: anything needed for you model to make predictions, e.g. features or processed data
         """
         # Implement this: only need to read in files for first assignment
         raise NotImplementedError()

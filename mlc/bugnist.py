@@ -75,6 +75,7 @@ class ScorableModelTemplate(ABC):
         """Read in arrays and compute features.
 
         :param raw_files: list of file path strings
+        :return: anything needed for you model to make predictions, e.g. features or processed data
         """
         raise NotImplementedError()
 
