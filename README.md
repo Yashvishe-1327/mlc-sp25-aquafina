@@ -78,4 +78,5 @@ model = ScorableModel() # error will be raised if the above is not implmented co
 
 ## Competition Submission Form
 
-Once the above is completed, submit the [Competition Submission Form](https://forms.gle/giucmSFyYQiBjL1S6).
+Once the above is completed, *every* team member should submit the
+[Competition Submission Form](https://forms.gle/giucmSFyYQiBjL1S6).
