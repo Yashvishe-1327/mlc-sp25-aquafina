@@ -2,7 +2,7 @@
 
 ## Competition Submission Form
 
-Once everything below is completed, *every* team member should submit the
+Once everything below is completed, every team should submit the
 [Competition Submission Form](https://forms.gle/giucmSFyYQiBjL1S6). It is
 due Wednesday, April 9th, at 11:59PM.
 
